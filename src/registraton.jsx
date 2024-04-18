@@ -35,14 +35,15 @@ const Register = () => {
     
 
     return (
-        <div className="h-screen w-full bg-slate-200">
+        <div className="h-screen w-full bg-slate-200" style={{ backgroundImage: 'url("image10.jpg")', backgroundSize: 'cover', backgroundPosition: 'center'}}>
             <div className="h-[10%] w-full flex justify-center items-center gap-6">
                 <button className="bg-white rounded-md h-8 w-32" onClick={handlesignin}>SIGN IN</button>
-                <span>Sign In or Sign Up</span>
+                <span className="text-white">Sign In or Sign Up</span>
                 <button className="bg-white rounded-md h-8 w-32" onClick={handlesignup}>SIGN UP</button>
             </div>
-            <div className="h-[70%] w-full flex justify-center items-center">
+            <div className="h-[70%] w-full flex justify-center items-center" >
                 {state === 1 ? (
+                    
                     <div className="h-[80%] w-[30%] border-4 border-slate-300 p-10">
                         <form className="h-full w-full flex flex-col items-center gap-10 ">
                             <input onChange={handleinput} name="phone" type="text" placeholder="PHONE NUMBER" className="bg-white w-[99%] h-10  placeholder-black pl-4"/>
