@@ -23,6 +23,9 @@ const navigate=useNavigate();
   const register=()=>{
     navigate('/signin');
   }
+  const join=()=>{
+    navigate('/membership');
+  }
     return(
         <div id="home" className="h-screen w-full flex flex-col " style={{ backgroundImage: "url('imag6.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
             <div className="h-[10%] relative top-0 left-0 w-full flex justify-between ">
@@ -35,7 +38,7 @@ const navigate=useNavigate();
         </div>
          <div className="flex flex-wrap items-center gap-6 mr-5 mt-8">
           <button onClick={register} className="hover:text-red-800 rounded-md sm:h-10 sm:w-20 hidden sm:flex items-center justify-center">Sign In</button>
-          <button className="bg-yellow-300 rounded-md sm:h-10 sm:w-40 hidden sm:flex items-center justify-center">Become a Member</button>
+          <button onClick={join} className="bg-yellow-300 rounded-md sm:h-10 sm:w-40 hidden sm:flex items-center justify-center">Become a Member</button>
         </div>
       </div>
       <div className="h-screen w-full flex relative" >
@@ -44,7 +47,7 @@ const navigate=useNavigate();
           <span className="text-3xl mt-1 text-red-900 text-red-950">evolutionary fitness</span>
           <span className=" mt-3 text-red-900 text-red-950">Unrivaled Gym Unparalleled Training Fitness Classes, World Class Studios to get the Body Shapes</span>
           <span className=" text-red-900 text-red-950">That you Dream of. Get Your Dream Body Now</span>
-          <button className="bg-yellow-300 mt-1 rounded-md h-10 w-40 text-white mt-6">Join Now</button>
+          <button onClick={join} className="bg-yellow-300 mt-1 rounded-md h-10 w-40 text-white mt-6">Join Now</button>
         </div>
         <div className="w-[40%]">
         </div>

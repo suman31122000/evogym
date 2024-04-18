@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 const Benefit=()=>{
     const object=[{
         name:"State of the Art facilities",
@@ -12,6 +13,10 @@ const Benefit=()=>{
         about:"Knowledgeable professionals dedicated to guiding individuals on their fitness journey, providing expertise, motivation, and support to help clients achieve their wellness goals. These experts typically hold certifications and qualifications in fitness training, nutrition, and specialized areas of exercise science, enabling them to design personalized workout programs tailored to each client's needs, abilities, and objectives",
     }
 ];
+const navigate=useNavigate();
+const join=()=>{
+    navigate('/membership');
+  }
 return(
 <div id="benefit" className="h-screen w-[100%] text-red-950 bg-red-50 p-5">
     <div className="h-[17%] w-full flex flex-col flex-wrap">
@@ -38,7 +43,7 @@ return(
 
 Joining our gym means becoming part of a powerful movement dedicated to achieving wellness goals, breaking personal records, and embracing a healthier lifestyle.</span><br/>
 <span> With millions of members already on board, you'll be part of a diverse and supportive community that inspires and motivates each other to reach new heights.</span>
-            <button className="flex mt-2 bg-yellow-400 h-8 w-28 items-center justify-center rounded-md">Join Now</button>
+            <button onClick={join} className="flex mt-2 bg-yellow-400 h-8 w-28 items-center justify-center rounded-md">Join Now</button>
         </div>
     </div>
 </div>
