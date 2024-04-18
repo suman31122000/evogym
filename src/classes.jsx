@@ -1,23 +1,13 @@
-import { useEffect } from "react";
+import React from 'react';
+
 const Classes = () => {
     const objects = [
-        { img: "imag1.jpg" },
-        { img: "imag6.jpg" },
-        { img: "image2.webp" },
-        { img: "image3.webp" },
-        { img: "image5.jpg" }
+        { img: "imag1.jpg", text: "Weightlifting" },
+        { img: "imag6.jpg", text: "Yoga" },
+        { img: "image2.webp", text: "Streching" },
+        { img: "image3.webp", text: "Running" },
+        { img: "image5.jpg", text: "Boxing" }
     ];
-
-    const handleScroll = (event) => {
-        const container = event.target;
-        const scrollAmount = event.deltaY;
-        container.scrollTo({
-            top:0,
-          left: container.scrollTop + scrollAmount,
-          behavior: 'smooth'
-        });
-    };
-    
 
     return (
         <div id="classes" className="bg-red-100 h-screen w-full">
@@ -28,8 +18,11 @@ const Classes = () => {
             </div>
             <div className="h-[50%] w-full flex flex-nowrap overflow-y-scroll no-scrollbar p-8">
                 {objects.map((object, index) => (
-                    <div key={index} className="flex-shrink-0 mr-4"  onWheel={handleScroll}>
+                    <div key={index} className="relative flex-shrink-0 mr-4">
                         <img src={object.img} className="max-h-full max-w-full" alt={`Image ${index + 1}`} />
+                        <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-0 transition duration-300 opacity-0 hover:opacity-70 hover:bg-white">
+                            <p className="text-black font-bold text-4xl">{object.text}</p>
+                        </div>
                     </div>
                 ))}
             </div>
