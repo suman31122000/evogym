@@ -18,16 +18,16 @@ const join=()=>{
     navigate('/membership');
   }
 return(
-<div id="benefit" className="h-screen w-[100%] text-red-950 bg-red-50 p-5">
+<div id="benefit" className="h-screen w-[100%] text-red-950 bg-red-50 p-5 hidden sm:flex flex-col">
     <div className="h-[17%] w-full flex flex-col flex-wrap">
         <span className="mt-2 text-xl font-bold mx-28">MORE THAN JUST GYM</span>
-        <span className="mt-2 mx-28">We provide World class fitness equipment, trainee and classes to get you to your ultimate fitness goal with ease . we provide true </span>
+        <span className="mt-2 mx-28 ">We provide World class fitness equipment, trainee and classes to get you to your ultimate fitness goal with ease . we provide true </span>
         <span className="mt-0 mx-28">care to each and every member </span>
     </div>
     <div className=" h-[40%] w-full flex flex-wrap justify-center ">
         <div className=" grid sm:grid-cols-3 justify-center gap-10 h-72 ">
         {object.map((object)=>(
-            <div key={object.name} className="grid grid-flow-row border-2 w-96 h-60 justify-center items-center border-red-950">
+            <div key={object.name} className="grid grid-flow-row border-2 w-96 h-60 justify-center items-center border-red-950 ">
                 <span></span>
             <span className="text-xl flex item-centre justify-center font-bold">{object.name}</span>
             <span className="text-xs mt-0 ">{object.about}</span>

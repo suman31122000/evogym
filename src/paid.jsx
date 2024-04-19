@@ -5,22 +5,22 @@ const Paid = () => {
         {
             name: "Basic",
             Price: 5,
-            Activities: "running",
+            Activities: "Running",
         },
         {
             name: "Advanced",
             Price: 10,
-            Activities: "weightlifting",
+            Activities: "Weightlifting",
         },
         {
             name: "Premium",
             Price: 20,
-            Activities: "weightlifting-running",
+            Activities: "Weightlifting-Running",
         },
         {
             name: "Luxury",
             Price: 30,
-            Activities: "all",
+            Activities: "All",
         }
     ];
 
@@ -31,7 +31,7 @@ const Paid = () => {
             </div>
             <div className='flex justify-center items-center gap-10 h-[85%] w-full'>
                 {array.map((data, index) => (
-                    <div key={index} className='flex flex-col border-4 h-[70%] w-60 flex-wrap items-center pt-10 hover:bg-slate-950 '>
+                    <div key={index} className='flex flex-col border-4 border-x-yellow-400 h-[70%] w-60 flex-wrap items-center pt-10 hover:bg-slate-950 '>
                         <span className='text-2xl font-semibold p-4 text-white '>{data.name}</span>
                         <span className='text-xl font-semibold p-4 text-white'>$ {data.Price}</span>
                         <span className='text-xl  p-4 pb-10 text-white'>{data.Activities}</span>
